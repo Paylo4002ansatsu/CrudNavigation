@@ -1,11 +1,9 @@
 package com.example.myaplicationrecuperar.ui.inicio;
-
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -13,11 +11,9 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
-
 import com.example.myaplicationrecuperar.R;
 import com.example.myaplicationrecuperar.databinding.FragmentInicioBinding;
 import com.example.myaplicationrecuperar.ui.EstudanteAdapter;
-
 
 public class InicioFragment extends Fragment {
 
@@ -71,14 +67,12 @@ public class InicioFragment extends Fragment {
     private void setupRecyclerView() {
         adapter = new EstudanteAdapter(
                 estudante -> {
-                    // Navegação para detalhes
                     Bundle bundle = new Bundle();
                     bundle.putInt("ID_ESTUDANTE", estudante.getId());
                     NavController navController = Navigation.findNavController(requireView());
                     navController.navigate(R.id.action_inicioFragment_to_detalheFragment, bundle);
                 },
                 estudante -> {
-                    // Listener para deletar
                     new AlertDialog.Builder(requireContext())
                             .setTitle("Confirmar exclusão")
                             .setMessage("Deseja realmente excluir " + estudante.getNome() + "?")
@@ -89,7 +83,6 @@ public class InicioFragment extends Fragment {
                             .show();
                 },
                 estudante -> {
-                    // Novo listener para editar
                     Bundle bundle = new Bundle();
                     bundle.putInt("ID_ESTUDANTE", estudante.getId());
                     NavController navController = Navigation.findNavController(requireView());

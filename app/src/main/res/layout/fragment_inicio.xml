@@ -12,12 +12,7 @@
         android:orientation="vertical"
         android:background="#FAFAFA">
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardElevation="0dp"
-            app:cardBackgroundColor="#4285F4"
-            android:layout_marginBottom="8dp">
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -31,7 +26,7 @@
                     android:src="@drawable/ic_user"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:tint="@android:color/white"/>
+                    android:tint="@color/purple_500"/>
 
                 <LinearLayout
                     android:id="@+id/totalAlunos"
@@ -46,7 +41,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Total"
-                        android:textColor="#E2E8F0"
+                        android:textColor="@color/purple_500"
                         android:textSize="12sp"
                         android:fontFamily="@font/poppins_medium"/>
 
@@ -54,14 +49,13 @@
                         android:id="@+id/alunosCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@android:color/white"
+                        android:textColor="@color/purple_500"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:fontFamily="@font/poppins_bold"/>
                 </LinearLayout>
 
             </RelativeLayout>
-        </com.google.android.material.card.MaterialCardView>
 
         <!-- TextView de erro -->
         <TextView

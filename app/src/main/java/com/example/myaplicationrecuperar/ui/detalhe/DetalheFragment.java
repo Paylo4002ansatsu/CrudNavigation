@@ -42,7 +42,7 @@ public class DetalheFragment extends Fragment {
             return;
         }
 
-        // Observadores
+
         viewModel.getEstudanteLiveData().observe(getViewLifecycleOwner(), estudante -> {
             if (estudante != null) {
                 binding.txtNome.setText(estudante.getNome());

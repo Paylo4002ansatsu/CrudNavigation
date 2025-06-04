@@ -55,7 +55,7 @@
             android:src="@drawable/delete_24dp_e3e3e3_fill0_wght400_grad0_opsz24"
             android:contentDescription="Excluir"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:tint="@color/black"/>
+            android:tint="@color/red"/>
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

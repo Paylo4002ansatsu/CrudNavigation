@@ -15,19 +15,21 @@
             android:id="@+id/action_inicioFragment_to_detalheFragment"
             app:destination="@id/detalheFragment" />
 
+
+
     </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.myaplicationrecuperar.ui.gallery.GalleryFragment"
+        android:name="com.example.myaplicationrecuperar.ui.cadastro.CadastroFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_cadastro" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.myaplicationrecuperar.ui.slideshow.SlideshowFragment"
+        android:name="com.example.myaplicationrecuperar.ui.estatistica.EstatisticaFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_estatistica" />
 
     <fragment
         android:id="@+id/detalheFragment"
