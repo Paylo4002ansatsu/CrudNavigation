@@ -1,29 +1,30 @@
 package com.example.myaplicationrecuperar.model;
 
-import java.util.ArrayList;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
-import java.util.Objects;
 
 public class Estudante {
-
+    @SerializedName("id")
     private int id;
+
+    @SerializedName("nome")
     private String nome;
+
+    @SerializedName("idade")
     private int idade;
-    private List<Double> notas=new ArrayList<>();
-    private List<Boolean> presenca=new ArrayList<>();
 
-    public Estudante(){}
-    public Estudante(String nome, int idade) {
-        this.id = id;
-        this.nome = nome;
-        this.idade = idade;
-    }
-    public Estudante(int id, String nome, int idade) {
-        this.id = id;
-        this.nome = nome;
-        this.idade = idade;
+    @SerializedName("notas")
+    private List<Double> notas;
+
+    @SerializedName("presenca")
+    private List<Boolean> presenca;
+
+    // Construtor vazio necessário para o Retrofit
+    public Estudante() {
     }
 
+    // Getters e Setters
     public int getId() {
         return id;
     }
@@ -52,29 +53,16 @@ public class Estudante {
         return notas;
     }
 
+    public void setNotas(List<Double> notas) {
+        this.notas = notas;
+    }
 
     public List<Boolean> getPresenca() {
         return presenca;
     }
 
-    public void setNotas(List<Double> notas) {
-        this.notas = notas;
-    }
-
     public void setPresenca(List<Boolean> presenca) {
         this.presenca = presenca;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Estudante estudante = (Estudante) o;
-        return id == estudante.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(id);
     }
 
     @Override

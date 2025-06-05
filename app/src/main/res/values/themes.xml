@@ -12,6 +12,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <item name="cardViewStyle">@style/Widget.MaterialComponents.CardView</item>
+        <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
     </style>
 
     <style name="Theme.MyAplicationRecuperar.NoActionBar">
